@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
     validateConfig();
 
     // Set texts from config
-    document.getElementById('valentineTitle').textContent = `${config.valentineName}, my love...`;
+    document.getElementById('valentineTitle').textContent = `${config.valentineName}, my love, my wife...`;
     
     // Set first question texts
     document.getElementById('question1Text').textContent = config.questions.first.text;
@@ -82,6 +82,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Setup music player
     setupMusicPlayer();
+	
+
+	
 });
 
 // Create floating hearts and bears
@@ -218,16 +221,16 @@ function setupMusicPlayer() {
     bgMusic.volume = config.music.volume || 0.5;
     bgMusic.load();
 
-    // Try autoplay if enabled
-    if (config.music.autoplay) {
-        const playPromise = bgMusic.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Autoplay prevented by browser");
-                musicToggle.textContent = config.music.startText;
-            });
-        }
-    }
+    // Attempt muted autoplay (allowed)
+	if (config.music.autoplay) {
+		bgMusic.muted = true;
+		bgMusic.play().then(() => {
+			musicToggle.textContent = config.music.startText;
+		}).catch(() => {
+			console.log("Muted autoplay failed (rare)");
+		});
+	}
+
 
     // Toggle music on button click
     musicToggle.addEventListener('click', () => {
@@ -239,4 +242,21 @@ function setupMusicPlayer() {
             musicToggle.textContent = config.music.startText;
         }
     });
+	
+	
+	const unlockAudio = () => {
+		bgMusic.muted = false;
+		bgMusic.play().catch(() => {});
+		musicToggle.textContent = config.music.stopText;
+
+		document.removeEventListener('click', unlockAudio);
+		document.removeEventListener('touchstart', unlockAudio);
+		document.removeEventListener('keydown', unlockAudio);
+	};
+
+	// First user interaction unlocks sound
+	document.addEventListener('click', unlockAudio);
+	document.addEventListener('touchstart', unlockAudio);
+	document.addEventListener('keydown', unlockAudio);
+
 } 

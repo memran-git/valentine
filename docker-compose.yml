@@ -1,0 +1,9 @@
+services:
+  valentine:
+    image: nginx:alpine
+    container_name: valentine-website
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
