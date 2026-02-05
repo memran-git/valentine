@@ -15,14 +15,14 @@
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  min-height: calc(100vh + 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -87,16 +87,16 @@ body {
 }
 
 .secret-answer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    margin-top: 0;
-    opacity: 0.1;
-    transition: opacity 0.3s;
-    transform: scale(0.7);
-    z-index: 2;
-    animation: subtle-hint 2s infinite alternate;
-    animation-delay: 5s;
+  position: absolute;
+  bottom: -40px;
+  right: 20px;
+  margin-top: 0;
+  opacity: 0.1;
+  transition: opacity 0.3s;
+  transform: scale(0.7);
+  z-index: 2;
+  animation: subtle-hint 2s infinite alternate;
+  animation-delay: 5s;
 }
 
 .secret-answer .cute-btn {
