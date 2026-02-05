@@ -28,18 +28,18 @@ const CONFIG = {
             secretAnswer: "I don't just love you, I admire you! 💕"     // Secret hover message
         },
         second: {
-            text: "Will you be my Valentine on February 14th, 2026? 🌹", // For the love meter
+            text: "How much do you love me?", // For the love meter
             startText: "Forever yours!",                                // Text before the percentage
             nextBtn: "Next 💕"                                          // Text for the next button
         },
         third: {
-            text: "How excited are you about meeting our baby in July? 👶",  // Question 3
-            yesBtn: "So excited!",                                       // Text for "Yes" button
-            noBtn: "No"                                                  // Text for "No" button
+            text: "Will you be my Valentine on February 14th, 2026? 🌹",  // Question 3
+            yesBtn: "100% YES",                                       // Text for "Yes" button
+            noBtn: "Nahhhhh"                                                  // Text for "No" button
         },
         fourth: {
-            text: "Will you be an amazing co-parent with me? 👨‍👩‍👧‍👦",
-            yesBtn: "Yes!",
+            text: "How excited are you about meeting our baby in July? 👶",
+            yesBtn: "So excited!",
             noBtn: "No"
         },
         fifth: {
