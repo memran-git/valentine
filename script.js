@@ -77,6 +77,20 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('yesBtn3').textContent = config.questions.third.yesBtn;
     document.getElementById('noBtn3').textContent = config.questions.third.noBtn;
 
+    // Set fourth question texts
+    if (config.questions.fourth) {
+        document.getElementById('question4Text').textContent = config.questions.fourth.text;
+        document.getElementById('yesBtn4').textContent = config.questions.fourth.yesBtn;
+        document.getElementById('noBtn4').textContent = config.questions.fourth.noBtn;
+    }
+
+    // Set fifth question texts
+    if (config.questions.fifth) {
+        document.getElementById('question5Text').textContent = config.questions.fifth.text;
+        document.getElementById('yesBtn5').textContent = config.questions.fifth.yesBtn;
+        document.getElementById('noBtn5').textContent = config.questions.fifth.noBtn;
+    }
+
     // Create initial floating elements
     createFloatingElements();
 
@@ -100,11 +114,11 @@ function createFloatingElements() {
         container.appendChild(div);
     });
 
-    // Create bears
-    config.floatingEmojis.bears.forEach(bear => {
+    // Create babies/family emojis
+    config.floatingEmojis.babies.forEach(baby => {
         const div = document.createElement('div');
         div.className = 'bear';
-        div.innerHTML = bear;
+        div.innerHTML = baby;
         setRandomPosition(div);
         container.appendChild(div);
     });
@@ -259,4 +273,4 @@ function setupMusicPlayer() {
 	document.addEventListener('touchstart', unlockAudio);
 	document.addEventListener('keydown', unlockAudio);
 
-} 
+}

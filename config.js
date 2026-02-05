@@ -15,7 +15,7 @@ const CONFIG = {
     // Find more emojis at: https://emojipedia.org
     floatingEmojis: {
         hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis
-        bears: ['🧸', '🐻']                       // Cute bear emojis
+        babies: ['👶', '🍼', '🤰', '👨‍👩‍👧‍👦']        // Baby and family emojis
     },
 
     // Questions and answers
@@ -25,33 +25,43 @@ const CONFIG = {
             text: "Do you like me?",                                    // First interaction
             yesBtn: "Yes",                                             // Text for "Yes" button
             noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+            secretAnswer: "I don't just love you, I admire you! 💕"     // Secret hover message
         },
         second: {
-            text: "How much do you love me?",                          // For the love meter
-            startText: "This much!",                                   // Text before the percentage
-            nextBtn: "Next ❤️"                                         // Text for the next button
+            text: "Will you be my Valentine on February 14th, 2026? 🌹", // For the love meter
+            startText: "Forever yours!",                                // Text before the percentage
+            nextBtn: "Next 💕"                                          // Text for the next button
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2026? 🌹", // The big question!
-            yesBtn: "Yes!",                                             // Text for "Yes" button
-            noBtn: "No"                                                 // Text for "No" button
+            text: "How excited are you about meeting our baby in July? 👶",  // Question 3
+            yesBtn: "So excited!",                                       // Text for "Yes" button
+            noBtn: "No"                                                  // Text for "No" button
+        },
+        fourth: {
+            text: "Will you be an amazing co-parent with me? 👨‍👩‍👧‍👦",
+            yesBtn: "Yes!",
+            noBtn: "No"
+        },
+        fifth: {
+            text: "Are you ready for this beautiful journey together? ❤️🤰👶",
+            yesBtn: "Yes!",
+            noBtn: "No"
         }
     },
 
     // Love meter messages
     // They show up depending on how far they slide the meter
     loveMessages: {
-        extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows when they go past 5000%
-        high: "To infinity and beyond! 🚀💝",              // Shows when they go past 1000%
-        normal: "And beyond! 🥰"                           // Shows when they go past 100%
+        extreme: "OUR LOVE IS INFINITE! 🚀💕👶✨",        // Shows when they go past 5000%
+        high: "Our family is going to be perfect! 👨‍👩‍👧‍👦💕",  // Shows when they go past 1000%
+        normal: "I can't wait to be parents with you! 🥰"              // Shows when they go past 100%
     },
 
     // Messages that appear after they say "Yes!"
     celebration: {
-        title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
-        message: "Now come get your gift, a big warm hug and a huge kiss!",
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
+        title: "You're the love of my life, and now we're creating a new one! 💕👶🎉",
+        message: "I promise to love you and our baby with all my heart. Happy Valentine's Day, my everything! 💑💕",
+        emojis: "💕👶🤰👨‍👩‍👧‍👦🎁❤️💖💝🍼💕"  // These will bounce around
     },
 
     // Color scheme for the website
@@ -86,4 +96,4 @@ const CONFIG = {
 };
 
 // Don't modify anything below this line unless you know what you're doing
-window.VALENTINE_CONFIG = CONFIG; 
+window.VALENTINE_CONFIG = CONFIG;
